@@ -69,7 +69,7 @@ public class ColaboradorService {
         Colaborador cola = mapper.toEntity(colaboradorDTO);
         Optional<Colaborador> exisColaborador = this.verificarCPFIgnoreId(cola);
         
-        if(this.verificarColaborador(cola).isPresent()){
+        if(this.verificarColaboradorIgnoreId(cola).isPresent()){
         throw new RecordAlreadyExistsNameException(
                     "Não pode criar colaborador com um nome já cadastrado. Tente excluir o seu nome da tabela primeiro.");
         }
