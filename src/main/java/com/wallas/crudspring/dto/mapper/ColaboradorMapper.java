@@ -10,8 +10,6 @@ import com.wallas.crudspring.dto.ColaboradorDTO;
 import com.wallas.crudspring.model.Cafe;
 import com.wallas.crudspring.model.Colaborador;
 
-import lombok.var;
-
 @Component
 public class ColaboradorMapper {
     
@@ -45,7 +43,7 @@ public class ColaboradorMapper {
         colaborador.setCpf(colaboradorDTO.getCpf());
 
         List<Cafe> cafes = colaboradorDTO.getCafes().stream().map(cafeDTO ->{
-            var cafe = new Cafe();
+            Cafe cafe = new Cafe();
             cafe.setId(cafeDTO.getId());
             cafe.setItem(cafeDTO.getItem());
             cafe.setData(cafeDTO.getData());

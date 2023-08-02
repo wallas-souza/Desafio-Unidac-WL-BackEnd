@@ -14,6 +14,8 @@ import com.wallas.crudspring.repository.ColaboradoresRepository;
 @SpringBootApplication
 public class CrudSpringApplication {
 
+	public String PORT = System.getenv("PORT");
+
 	public static void main(String[] args) {
 		SpringApplication.run(CrudSpringApplication.class, args);
 	}
